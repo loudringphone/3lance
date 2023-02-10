@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_10_054154) do
+ActiveRecord::Schema.define(version: 2023_02_10_055459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(version: 2023_02_10_054154) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "comments_requests", force: :cascade do |t|
+    t.integer "comment_id"
+    t.integer "request_id"
+  end
+
+  create_table "comments_users", force: :cascade do |t|
+    t.integer "comment_id"
+    t.integer "user_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "receiver_id"
@@ -34,6 +44,11 @@ ActiveRecord::Schema.define(version: 2023_02_10_054154) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages_users", force: :cascade do |t|
+    t.integer "message_id"
+    t.integer "user_id"
+  end
+
   create_table "offers", force: :cascade do |t|
     t.integer "user_id"
     t.integer "request_id"
@@ -41,6 +56,11 @@ ActiveRecord::Schema.define(version: 2023_02_10_054154) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "offers_users", force: :cascade do |t|
+    t.integer "offer_id"
+    t.integer "user_id"
   end
 
   create_table "requests", force: :cascade do |t|
@@ -53,6 +73,11 @@ ActiveRecord::Schema.define(version: 2023_02_10_054154) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "requests_users", force: :cascade do |t|
+    t.integer "request_id"
+    t.integer "user_id"
   end
 
 end
