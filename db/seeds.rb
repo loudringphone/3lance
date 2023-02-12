@@ -1,15 +1,15 @@
 User.destroy_all
-u1 = User.create :user_name => 'jonesy', :email => 'jonesy@ga.co', :password => 'chicken', 
-u2 = User.create :user_name => 'craigsy', :email => 'craigsy@ga.co', :password => 'chicken'
-u3 = User.create :user_name => 'holsy', :email => 'holsy@ga.co', :password => 'chicken',
-u4 = User.create :user_name => 'burnsy', :email => 'burnsy@gmail.co', :password => 'chicken'
-u5 = User.create :user_name => 'jones', :email => 'jones@gmail.co', :password => 'chicken', 
-u6 = User.create :user_name => 'craig', :email => 'craig@gmail.co', :password => 'chicken'
-u7 = User.create :user_name => 'holt', :email => 'holt@gmail.co', :password => 'chicken',
-u8 = User.create :user_name => 'burns', :email => 'burns@gmail.co', :password => 'chicken'
-u9 = User.create :user_name => 'hue', :email => 'hue@ga.co', :password => 'chicken', :admin => true
-u10 = User.create :user_name => 'fung', :email => 'fung@ga.co', :password => 'chicken', :admin => true
-u11 = User.create :user_name => 'wayne', :email => 'wayne@ga.co', :password => 'chicken', :admin => true
+u1 = User.create :username => 'jonesy', :email => 'jonesy@ga.co', :password => 'chicken'
+u2 = User.create :username => 'craigsy', :email => 'craigsy@ga.co', :password => 'chicken',
+# u3 = User.create :username => 'holsy', :email => 'holsy@ga.co', :password => 'chicken',
+# u4 = User.create :username => 'burnsy', :email => 'burnsy@gmail.co', :password => 'chicken',
+# u5 = User.create :username => 'jones', :email => 'jones@gmail.co', :password => 'chicken', 
+# u6 = User.create :username => 'craig', :email => 'craig@gmail.co', :password => 'chicken',
+# u7 = User.create :username => 'holt', :email => 'holt@gmail.co', :password => 'chicken',
+# u8 = User.create :username => 'burns', :email => 'burns@gmail.co', :password => 'chicken'
+# u9 = User.create :username => 'hue', :email => 'hue@ga.co', :password => 'chicken', :admin => true
+# u10 = User.create :username => 'fung', :email => 'fung@ga.co', :password => 'chicken', :admin => true
+# u11 = User.create :username => 'wayne', :email => 'wayne@ga.co', :password => 'chicken', :admin => true
 puts "#{ User.count } users"
 
 Offer.destroy_all
