@@ -31,6 +31,8 @@ gem 'rack-cors'
 # Use Json Web Token (JWT) for token based authentication
 gem 'jwt'
 
+gem 'active_model_serializers'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
