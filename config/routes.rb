@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-  post '/auth/login', to: 'authentication#login'
-  post '/login',    to: 'sessions#create'
-  post '/logout',   to: 'sessions#destroy'
-  get '/logged_in', to: 'sessions#is_logged_in?'
-  resources :offers
-  resources :users, only: [:create, :show, :index] do 
-    resources :items, only: [:create, :show, :index, :destroy]
- end
+  resources :users
+  post "/login", to: "users#login"
+  get '/profile', to: "users#user_profile"
+
+  # get 'pages/home'
+  # post '/login', to: 'authentication#login'
+  
+  # post "/login", to: "users#login"
+  
+  # post "/signup", to: "users#create"
+  # post "/login", to: "session#create"
+  # get "/authorized", to: "session#show"
+  # get "/dashboard", to: "users#show" 
 end

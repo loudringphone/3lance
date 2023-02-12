@@ -19,6 +19,19 @@ Bundler.require(*Rails.groups)
 
 module ThreelancersServer
   class Application < Rails::Application
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options]
+    
+      end
+    end
+
+
+
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.api_only = false
@@ -33,5 +46,7 @@ module ThreelancersServer
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    
   end
 end
