@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
     before_action :set_request, only: %i[ show edit update destroy ]
-    #skip_before_action :is_authorized, only: [:index]
+    skip_before_action :is_authorized, only: [:index]
  
     # GET /requests or /requests.json
     def index

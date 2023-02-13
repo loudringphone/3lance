@@ -2,28 +2,28 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @request.title %>
+  <%= @offer.title %>
 </p>
 <p>
   <strong>Location:</strong>
-  <%= @request.location %>
+  <%= @offer.location %>
 </p>
 <p>
   <strong>Date:</strong>
-  <%= @request.datetime %>
+  <%= @offer.datetime %>
 </p>
 <p>
   <strong>Description:</strong>
-  <%= @request.description %>
+  <%= @offer.description %>
 </p>
 <p>
   <strong>Budget:</strong>
-  <%= @request.budget %>
+  <%= @offer.budget %>
 </p>
 <p>
   <strong>Status:</strong>
-  <%= @request.status %>
+  <%= @offer.status %>
 </p>
 
-<%= link_to 'Edit', edit_request_path(@request) %> |
-<%= link_to 'Back', requests_path %>
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>

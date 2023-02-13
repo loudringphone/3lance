@@ -1,1 +1,1 @@
-json.partial! "requests/request", request: @request
+json.partial! "offers/offer", offer: @offer
