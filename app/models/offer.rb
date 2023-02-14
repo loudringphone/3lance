@@ -10,7 +10,7 @@ class Offer < ApplicationRecord
 
     def only_one_open_offer_per_user
         if self.open? && Offer.exists?(user_id: self.user_id, request_id: self.request_id, status: 'Open'){ |offer| offer.id != self.id }
-          errors.add(:base, 'You cannot have more than one open offer at a time')
+          errors.add(:base, 'You cannot have more than one open offer for each request!')
         end
       end
 end
