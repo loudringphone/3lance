@@ -1,13 +1,13 @@
 User.destroy_all
-u1 = User.create :id => 1, :username => 'wayne', :email => 'wayne@ga.co', :password => 'chicken', :admin => true
-u2 = User.create :id => 2, :username => 'hue', :email => 'hue@ga.co', :password => 'chicken', :admin => true
-u3 = User.create :id => 3, :username => 'fung', :email => 'fung@ga.co', :password => 'chicken', :admin => true
-u4 = User.create :id => 4,:username => 'craigsy', :email => 'craigsy@ga.co', :password => 'chicken'
-u5 = User.create :id => 5, :username => 'holsy', :email => 'holsy@ga.co', :password => 'chicken'
-u6 = User.create :id => 6, :username => 'burnsy', :email => 'burnsy@gmail.co', :password => 'chicken'
-u7 = User.create :id => 7, :username => 'cowsy', :email => 'cowsy@ga.co', :password => 'chicken'
-u8 = User.create :id => 8, :username => 'helly', :email => 'helly@ga.co', :password => 'chicken'
-u9 = User.create :id => 9, :username => 'shilly', :email => 'shilly@gmail.co', :password => 'chicken'
+u1 = User.create :username => 'wayne', :email => 'wayne@ga.co', :password => 'chicken', :admin => true
+u2 = User.create :username => 'hue', :email => 'hue@ga.co', :password => 'chicken', :admin => true
+u3 = User.create :username => 'fung', :email => 'fung@ga.co', :password => 'chicken', :admin => true
+u4 = User.create :username => 'craigsy', :email => 'craigsy@ga.co', :password => 'chicken'
+u5 = User.create :username => 'holsy', :email => 'holsy@ga.co', :password => 'chicken'
+u6 = User.create :username => 'burnsy', :email => 'burnsy@gmail.co', :password => 'chicken'
+u7 = User.create :username => 'cowsy', :email => 'cowsy@ga.co', :password => 'chicken'
+u8 = User.create :username => 'helly', :email => 'helly@ga.co', :password => 'chicken'
+u9 = User.create  :username => 'shilly', :email => 'shilly@gmail.co', :password => 'chicken'
 
 puts "#{ User.count } users"
 
@@ -29,8 +29,8 @@ o14 = Offer.create :offer_amount => 100, :status => 'Open'
 puts "#{ Offer.count } offers"
 
 Request.destroy_all
-r1 = Request.create :id => 1, :status => 'Open', :location => 'Bondi', :title => 'carpet clean', :budget => 50, :description => 'carpet clean need help', :time => DateTime.new(2023, 8, 5, 12, 35)
-r2 = Request.create :id => 2, :status => 'Open', :location => 'Double bay', :title => 'Moving house', :budget => 60, :description => 'moving house need help', :time => DateTime.new(2023, 3, 5, 12, 00)
+r1 = Request.create :status => 'Open', :location => 'Bondi', :title => 'carpet clean', :budget => 50, :description => 'carpet clean need help', :time => DateTime.new(2023, 8, 5, 12, 35)
+r2 = Request.create :status => 'Open', :location => 'Double bay', :title => 'Moving house', :budget => 60, :description => 'moving house need help', :time => DateTime.new(2023, 3, 5, 12, 00)
 r3 = Request.create :status => 'Open', :location => 'Glebe', :title => 'Wall repair', :budget => 70, :description => 'wall repair need help', :time => DateTime.new(2023, 3, 1, 8, 35)
 r4 = Request.create :status => 'Open', :location => 'Pyrmont', :title => 'Paint bathroom', :budget => 50, :description => 'I need helpt to paint my bathroom', :time => DateTime.new(2023, 4, 4, 11, 30)
 r5 = Request.create :status => 'Open', :location => 'Parramatta', :title => 'Kitchen clean', :budget => 60, :description => 'I need help to clean my kitchen', :time => DateTime.new(2023, 2, 21, 10, 00)
@@ -76,8 +76,8 @@ r8.offers << o13 << o14
 
 # Seed data for Message model
 Message.destroy_all
-m1 = Message.create! :sender_id => 4, :receiver_id => 5, :content => "Hello, how many of bedrooms of the apartment?", :is_read => true, :request_id => 1
-m2 = Message.create! :sender_id => 5, :receiver_id => 4, :content => "3 bedrooms to be cleaned", :is_read => false, :request_id => 1
-m3 = Message.create! :sender_id => 4, :receiver_id => 6, :content => "I can offer a better price.", :is_read => true, :request_id => 2
-m4 = Message.create! :sender_id => 6, :receiver_id => 4, :content => "How much is it?", :is_read => false, :request_id => 2
+m1 = Message.create! :sender_id => u4.id, :receiver_id => u5.id, :content => "Hello, how many of bedrooms of the apartment?", :is_read => true, :request_id => 1
+m2 = Message.create! :sender_id => u5.id, :receiver_id => u4.id, :content => "3 bedrooms to be cleaned", :is_read => false, :request_id => 1
+m3 = Message.create! :sender_id => u4.id, :receiver_id => u6.id, :content => "I can offer a better price.", :is_read => true, :request_id => 2
+m4 = Message.create! :sender_id => u6.id, :receiver_id => u4.id, :content => "How much is it?", :is_read => false, :request_id => 2
 puts "#{Message.count} Messages"
