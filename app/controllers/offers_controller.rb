@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
-    before_action :set_request, only: %i[ show edit update destroy ]
-    skip_before_action :is_authorized, only: [:index]
+    before_action :set_offer, only: %i[ show edit update destroy ]
+    skip_before_action :is_authorized, only: [:index, :show]
  
     # GET /offers or /offers.json
     def index
@@ -12,8 +12,8 @@ class OffersController < ApplicationController
   
     # GET /offers/1 or /offers/1.json
     def show
-        @offer = Offer.find(params[:id]);
-        render :json => @offer.to_json(:include => :request)
+        # @offer = Offer.find(params[:id]);
+        # render :json => @offer.to_json(:include => :request)
     end
   
     # GET /offers/new
