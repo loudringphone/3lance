@@ -4,7 +4,7 @@ class CreateMessages < ActiveRecord::Migration[5.2]
       t.integer :sender_id
       t.integer :receiver_id
       t.text :content
-      t.datetime :sent_time
+      t.datetime :sent_time, :default => Time.now
       t.boolean :is_read, :default => false
 
       t.timestamps
