@@ -12,8 +12,6 @@ class OffersController < ApplicationController
   
     # GET /offers/1 or /offers/1.json
     def show
-        # @offer = Offer.find(params[:id]);
-        # render :json => @offer.to_json(:include => :request)
     end
   
     # GET /offers/new
