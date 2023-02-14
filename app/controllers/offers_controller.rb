@@ -5,7 +5,6 @@ class OffersController < ApplicationController
     # GET /offers or /offers.json
     def index
         @offers = Offer.all
-        raise 'hell'
         # render json format of all offers with association with request.
         # the association btw Request and Offer is has_many, that why :request is singular
         render :json => @offers.to_json(:include => :request)
