@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-    before_action :set_request, only: %i[ show edit update destroy ]
+    before_action :set_offer, only: %i[ show edit update destroy ]
     skip_before_action :is_authorized, only: [:index]
  
     # GET /offers or /offers.json
