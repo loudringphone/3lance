@@ -1,7 +1,7 @@
 class OffersController < ApplicationController
     before_action :set_offer, only: %i[ show edit update destroy ]
     skip_before_action :is_authorized, only: [:index, :show]
- 
+
     # GET /offers or /offers.json
     def index
         @offers = Offer.all
@@ -9,16 +9,16 @@ class OffersController < ApplicationController
         # the association btw Request and Offer is has_many, that why :request is singular
         render :json => @offers.to_json(:include => :request)
     end
-  
+
     # GET /offers/1 or /offers/1.json
     def show
     end
-  
+
     # GET /offers/new
     def new
       @offer = Offer.new
     end
-  
+
     # GET /offers/1/edit
     def edit
     end
@@ -26,7 +26,7 @@ class OffersController < ApplicationController
     # POST
     def create
       @offer = Offer.new(offer_params)
-  
+
       respond_to do |format|
         if @offer.save
           format.html { redirect_to offer_url(@offer), notice: "Offer was successfully created." }
@@ -37,7 +37,7 @@ class OffersController < ApplicationController
         end
       end
     end
-  
+
     # PATCH/PUT /offers/1 or /offers/1.json
     def update
       respond_to do |format|
@@ -50,23 +50,23 @@ class OffersController < ApplicationController
         end
       end
     end
-  
+
     # DELETE /offers/1 or /offers/1.json
     def destroy
       @offer.destroy
-  
+
       respond_to do |format|
         format.html { redirect_to offers_url, notice: "Offer was successfully destroyed." }
         format.json { head :no_content }
       end
     end
-  
+
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_offer
         @offer = Offer.find(params[:id])
       end
-  
+
       # Only allow a list of trusted parameters through.
       def offer_params
         params.require(:offer).permit(:user_id, :offer_amount, :status, :request_id)

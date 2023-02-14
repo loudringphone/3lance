@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2023_02_10_055459) do
     t.integer "user_id"
     t.integer "request_id"
     t.integer "offer_amount"
-    t.string "status"
+    t.string "status", default: "Open"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 2023_02_10_055459) do
     t.datetime "time"
     t.text "description"
     t.decimal "budget"
-    t.string "status"
+    t.string "status", default: "Open"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
