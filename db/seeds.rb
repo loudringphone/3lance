@@ -49,16 +49,16 @@ puts "#{ Request.count } requests"
 
 puts "Users and requests"
 u4.requests << r1 << r2 << r14 << r10
-u5.requests << r3 << r4 << r7 << r8 
-u6.requests << r5 << r6 
+u5.requests << r3 << r4 << r7 << r8
+u6.requests << r5 << r6
 u7.requests << r9
 u8.requests << r13
-u9.requests << r11 << r12 
+u9.requests << r11 << r12
 
 puts "Users and offers"
-u4.offers << o13 
-u5.offers << o1 << o2 
-u6.offers << o7 << o8 
+u4.offers << o13
+u5.offers << o1 << o2
+u6.offers << o7 << o8
 u7.offers << o9 << o10 << o11 << o12
 u8.offers << o3 << o4 << o5 << o6
 u9.offers << o14
@@ -66,11 +66,11 @@ u9.offers << o14
 puts "Requests and offers"
 r1.offers << o1 << o9
 r2.offers << o2 << o3 << o10
-r3.offers << o4 << o11 
-r4.offers << o5 << o8 
+r3.offers << o4 << o11
+r4.offers << o5 << o8
 r5.offers << o6
 r6.offers << o12
-r7.offers << o7 
+r7.offers << o7
 r8.offers << o13 << o14
 
 
