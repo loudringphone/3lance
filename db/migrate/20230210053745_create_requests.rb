@@ -7,7 +7,7 @@ class CreateRequests < ActiveRecord::Migration[5.2]
       t.datetime :time
       t.text :description
       t.decimal :budget
-      t.string :status
+      t.string :status, :default => 'Open' # add the default value so all newly created requests will have 'Open' status
 
       t.timestamps
     end
