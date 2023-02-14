@@ -38,7 +38,7 @@ r6 = Request.create :status => 'Open', :location => 'Surry hills', :title => 'Pe
 r7 = Request.create :status => 'Open', :location => 'Manly', :title => 'House clean', :budget => 80, :description => 'clean house after a party', :time => DateTime.new(2023, 3, 1, 20, 00)
 r8 = Request.create :status => 'Open', :location => 'Pyrmont', :title => 'Moving house job', :budget => 90, :description => 'need help to move house from pyrmont to bondi', :time => DateTime.new(2023, 4, 1, 11, 00)
 r9 = Request.create :status => 'Open', :location => 'Blacktown', :title => 'baysitter needed', :budget => 50, :description => 'baby sit my children for a month', :time => DateTime.new(2023, 3, 1, 8, 00)
-r10 = Request.create :status => 'Open', :location => 'Haymarket', :title => 'broekn washing machine', :budget => 10, :description => 'need someone to repair my washing machine', :time => DateTime.new(2023, 2, 15, 12, 00)
+r10 = Request.create :status => 'Open', :location => 'Haymarket', :title => 'broken washing machine', :budget => 10, :description => 'need someone to repair my washing machine', :time => DateTime.new(2023, 2, 15, 12, 00)
 r11 = Request.create :status => 'Open', :location => 'Townhall', :title => 'lazy coder', :budget => 20, :description => 'write my seed data for a coding project', :time => DateTime.new(2023, 2, 17, 12, 30)
 r12 = Request.create :status => 'Open', :location => 'Kirribilli', :title => 'dirty car', :budget => 30, :description => 'Clean my car for $60', :time => DateTime.new(2023, 2, 18, 12, 30)
 r13 = Request.create :status => 'Open', :location => 'Randwick', :title => 'save the children', :budget => 40, :description => 'teach my childrent to swim', :time => DateTime.new(2023, 2, 18, 8, 30)
