@@ -76,8 +76,18 @@ r8.offers << o13 << o14
 
 # Seed data for Message model
 Message.destroy_all
-m1 = Message.create! :sender_id => u4.id, :receiver_id => u5.id, :content => "Hello, how many of bedrooms of the apartment?", :is_read => true, :request_id => 1
-m2 = Message.create! :sender_id => u5.id, :receiver_id => u4.id, :content => "3 bedrooms to be cleaned", :is_read => false, :request_id => 1
-m3 = Message.create! :sender_id => u4.id, :receiver_id => u6.id, :content => "I can offer a better price.", :is_read => true, :request_id => 2
-m4 = Message.create! :sender_id => u6.id, :receiver_id => u4.id, :content => "How much is it?", :is_read => false, :request_id => 2
+m1 = Message.create! :sender_id => u4.id, :receiver_id => u5.id, :content => "Hello, how many of bedrooms of the apartment?", :is_read => true, :request_id => r1.id
+m2 = Message.create! :sender_id => u5.id, :receiver_id => u4.id, :content => "3 bedrooms to be cleaned", :is_read => false, :request_id => r1.id
+m3 = Message.create! :sender_id => u4.id, :receiver_id => u6.id, :content => "I can offer a better price.", :is_read => true, :request_id => r2.id
+m4 = Message.create! :sender_id => u6.id, :receiver_id => u4.id, :content => "How much is it?", :is_read => false, :request_id => r2.id
 puts "#{Message.count} Messages"
+
+
+# Seed data for Comment model
+Comment.destroy_all
+c1 = Comment.create! :request_id => r2.id, :user_id => u4.id, :content => "Hello, I need help!"
+c2 = Comment.create! :request_id => r2.id, :user_id => u5.id, :content => "Raise your budget!"
+c3 = Comment.create! :request_id => r2.id, :user_id => u4.id, :content => "No I cant!"
+c4 = Comment.create! :request_id => r2.id, :user_id => u6.id, :content => "Damn you cheapskate!"
+
+puts "#{Comment.count} Comments"

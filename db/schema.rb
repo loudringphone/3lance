@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2023_02_14_125843) do
     t.integer "user_id"
     t.integer "request_id"
     t.text "content"
-    t.datetime "sent_time"
+    t.datetime "sent_time", default: "2023-02-15 00:05:43"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2023_02_14_125843) do
     t.integer "user_id"
     t.integer "request_id"
     t.integer "offer_amount"
-    t.string "status", default: "Open"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2023_02_14_125843) do
     t.datetime "time"
     t.text "description"
     t.decimal "budget"
-    t.string "status", default: "Open"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

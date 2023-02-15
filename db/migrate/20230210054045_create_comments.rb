@@ -4,7 +4,7 @@ class CreateComments < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.integer :request_id
       t.text :content
-      t.datetime :sent_time
+      t.datetime :sent_time, :default => Time.now
       t.timestamps
     end
   end
