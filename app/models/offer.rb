@@ -1,8 +1,8 @@
 class Offer < ApplicationRecord
     belongs_to :user, :optional => true
     belongs_to :request, :optional => true
-    validates :user_id, presence: true
-    validate :only_one_open_offer_per_user
+    # validates :user_id, presence: true
+    # validate :only_one_open_offer_per_user
 
     def open?
         status == 'Open'

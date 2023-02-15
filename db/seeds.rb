@@ -7,25 +7,25 @@ u5 = User.create :username => 'holsy', :email => 'holsy@ga.co', :password => 'ch
 u6 = User.create :username => 'burnsy', :email => 'burnsy@gmail.co', :password => 'chicken'
 u7 = User.create :username => 'cowsy', :email => 'cowsy@ga.co', :password => 'chicken'
 u8 = User.create :username => 'helly', :email => 'helly@ga.co', :password => 'chicken'
-u9 = User.create  :username => 'shilly', :email => 'shilly@gmail.co', :password => 'chicken'
+u9 = User.create :username => 'shilly', :email => 'shilly@gmail.co', :password => 'chicken'
 
 puts "#{ User.count } users"
 
 Offer.destroy_all
-o1 = Offer.create :offer_amount => 50, :status => 'Open'
-o2 = Offer.create :offer_amount => 60, :status => 'Open'
-o3 = Offer.create :offer_amount => 70, :status => 'Open'
-o4 = Offer.create :offer_amount => 50, :status => 'Open'
-o5 = Offer.create :offer_amount => 60, :status => 'Open'
-o6 = Offer.create :offer_amount => 70, :status => 'Open'
-o7 = Offer.create :offer_amount => 80, :status => 'Open'
-o8 = Offer.create :offer_amount => 90, :status => 'Open'
-o9 = Offer.create :offer_amount => 50, :status => 'Open'
-o10 = Offer.create :offer_amount => 10, :status => 'Open'
-o11 = Offer.create :offer_amount => 20, :status => 'Open'
-o12 = Offer.create :offer_amount => 30, :status => 'Open'
-o13 = Offer.create :offer_amount => 40, :status => 'Open'
-o14 = Offer.create :offer_amount => 100, :status => 'Open'
+o1 = Offer.create! :offer_amount => 50, :status => 'Open'
+o2 = Offer.create! :offer_amount => 60, :status => 'Open'
+o3 = Offer.create! :offer_amount => 70, :status => 'Open'
+o4 = Offer.create! :offer_amount => 50, :status => 'Open'
+o5 = Offer.create! :offer_amount => 60, :status => 'Open'
+o6 = Offer.create! :offer_amount => 70, :status => 'Open'
+o7 = Offer.create! :offer_amount => 80, :status => 'Open'
+o8 = Offer.create! :offer_amount => 90, :status => 'Open'
+o9 = Offer.create! :offer_amount => 50, :status => 'Open'
+o10 = Offer.create! :offer_amount => 10, :status => 'Open'
+o11 = Offer.create! :offer_amount => 20, :status => 'Open'
+o12 = Offer.create! :offer_amount => 30, :status => 'Open'
+o13 = Offer.create! :offer_amount => 40, :status => 'Open'
+o14 = Offer.create! :offer_amount => 100, :status => 'Open'
 puts "#{ Offer.count } offers"
 
 Request.destroy_all
@@ -80,6 +80,7 @@ m1 = Message.create! :sender_id => u4.id, :receiver_id => u5.id, :content => "He
 m2 = Message.create! :sender_id => u5.id, :receiver_id => u4.id, :content => "3 bedrooms to be cleaned", :is_read => false, :request_id => r1.id
 m3 = Message.create! :sender_id => u4.id, :receiver_id => u6.id, :content => "I can offer a better price.", :is_read => true, :request_id => r2.id
 m4 = Message.create! :sender_id => u6.id, :receiver_id => u4.id, :content => "How much is it?", :is_read => false, :request_id => r2.id
+m5 = Message.create! :sender_id => u5.id, :receiver_id => u6.id, :content => "When can you start?", :is_read => false, :request_id => r3.id
 puts "#{Message.count} Messages"
 
 
