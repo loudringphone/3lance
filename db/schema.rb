@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2023_02_14_125843) do
     t.integer "sender_id"
     t.integer "receiver_id"
     t.text "content"
-    t.datetime "sent_time", default: "2023-02-15 00:05:43"
+    t.datetime "sent_time", default: "2023-02-14 23:59:10"
     t.boolean "is_read", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
