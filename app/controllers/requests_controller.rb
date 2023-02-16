@@ -66,8 +66,7 @@ class RequestsController < ApplicationController
 
       # Only allow a list of trusted parameters through.
       def request_params
-        params.require(:request).permit(:user_id, :title, :location, :time, :description, :budget)
-        # removed :status from params because by default, new request will have the 'Open' status.
+        params.require(:request).permit(:user_id, :title, :location, :time, :description, :budget, :status)
         # refer to the schema which now set the default status as 'Open'
       end
 end
