@@ -12,20 +12,20 @@ u9 = User.create :username => 'shilly', :email => 'shilly@gmail.co', :password =
 puts "#{ User.count } users"
 
 Request.destroy_all
-r1 = Request.create :status => 'Completed', :location => 'Bondi', :title => 'carpet clean', :budget => 50, :description => 'carpet clean need help', :time => DateTime.new(2023, 8, 5, 12, 35)
-r2 = Request.create :status => 'Completed', :location => 'Double bay', :title => 'Moving house', :budget => 60, :description => 'moving house need help', :time => DateTime.new(2023, 3, 5, 12, 00)
-r3 = Request.create :status => 'Cancelled', :location => 'Glebe', :title => 'Wall repair', :budget => 70, :description => 'wall repair need help', :time => DateTime.new(2023, 3, 1, 8, 35)
-r4 = Request.create :status => 'Open', :location => 'Pyrmont', :title => 'Paint bathroom', :budget => 50, :description => 'I need helpt to paint my bathroom', :time => DateTime.new(2023, 4, 4, 11, 30)
-r5 = Request.create :status => 'Open', :location => 'Parramatta', :title => 'Kitchen clean', :budget => 60, :description => 'I need help to clean my kitchen', :time => DateTime.new(2023, 2, 21, 10, 00)
-r6 = Request.create :status => 'Open', :location => 'Surry hills', :title => 'Pet sitting', :budget => 70, :description => 'look after pets whilst i am on holiday', :time => DateTime.new(2023, 2, 18, 8, 00)
-r7 = Request.create :status => 'Open', :location => 'Manly', :title => 'House clean', :budget => 80, :description => 'clean house after a party', :time => DateTime.new(2023, 3, 1, 20, 00)
-r8 = Request.create :status => 'Open', :location => 'Pyrmont', :title => 'Moving house job', :budget => 90, :description => 'need help to move house from pyrmont to bondi', :time => DateTime.new(2023, 4, 1, 11, 00)
-r9 = Request.create :status => 'Open', :location => 'Blacktown', :title => 'baysitter needed', :budget => 50, :description => 'baby sit my children for a month', :time => DateTime.new(2023, 3, 1, 8, 00)
-r10 = Request.create :status => 'Open', :location => 'Haymarket', :title => 'broken washing machine', :budget => 10, :description => 'need someone to repair my washing machine', :time => DateTime.new(2023, 2, 15, 12, 00)
-r11 = Request.create :status => 'Open', :location => 'Townhall', :title => 'lazy coder', :budget => 20, :description => 'write my seed data for a coding project', :time => DateTime.new(2023, 2, 17, 12, 30)
-r12 = Request.create :status => 'Open', :location => 'Kirribilli', :title => 'dirty car', :budget => 30, :description => 'Clean my car for $60', :time => DateTime.new(2023, 2, 18, 12, 30)
-r13 = Request.create :status => 'Open', :location => 'Randwick', :title => 'save the children', :budget => 40, :description => 'teach my childrent to swim', :time => DateTime.new(2023, 2, 18, 8, 30)
-r14 = Request.create :status => 'Open', :location => 'Alexandria', :title => 'bonjour', :budget => 10, :description => 'I need lessons to learn basic french', :time => DateTime.new(2023, 2, 18, 14, 30)
+r1 = Request.create :status => 'Completed', :location => 'Bondi, NSW', :title => 'carpet clean', :budget => 50, :description => 'carpet clean need help', :time => DateTime.new(2023, 8, 5, 12, 35)
+r2 = Request.create :status => 'Completed', :location => 'Double bay, NSW', :title => 'Moving house', :budget => 60, :description => 'moving house need help', :time => DateTime.new(2023, 3, 5, 12, 00)
+r3 = Request.create :status => 'Cancelled', :location => 'Glebe, NSW', :title => 'Wall repair', :budget => 70, :description => 'wall repair need help', :time => DateTime.new(2023, 3, 1, 8, 35)
+r4 = Request.create :status => 'Open', :location => 'Pyrmont, NSW', :title => 'Paint bathroom', :budget => 50, :description => 'I need helpt to paint my bathroom', :time => DateTime.new(2023, 4, 4, 11, 30)
+r5 = Request.create :status => 'Open', :location => 'Parramatta, NSW', :title => 'Kitchen clean', :budget => 60, :description => 'I need help to clean my kitchen', :time => DateTime.new(2023, 2, 21, 10, 00)
+r6 = Request.create :status => 'Open', :location => 'Surry hills, NSW', :title => 'Pet sitting', :budget => 70, :description => 'look after pets whilst i am on holiday', :time => DateTime.new(2023, 2, 18, 8, 00)
+r7 = Request.create :status => 'Open', :location => 'Manly, NSW', :title => 'House clean', :budget => 80, :description => 'clean house after a party', :time => DateTime.new(2023, 3, 1, 20, 00)
+r8 = Request.create :status => 'Open', :location => 'Pyrmont, NSW', :title => 'Moving house job', :budget => 90, :description => 'need help to move house from pyrmont to bondi', :time => DateTime.new(2023, 4, 1, 11, 00)
+r9 = Request.create :status => 'Open', :location => 'Blacktown, NSW', :title => 'baysitter needed', :budget => 50, :description => 'baby sit my children for a month', :time => DateTime.new(2023, 3, 1, 8, 00)
+r10 = Request.create :status => 'Open', :location => 'Haymarket, NSW', :title => 'broken washing machine', :budget => 10, :description => 'need someone to repair my washing machine', :time => DateTime.new(2023, 2, 15, 12, 00)
+r11 = Request.create :status => 'Open', :location => 'Townhall, NSW', :title => 'lazy coder', :budget => 20, :description => 'write my seed data for a coding project', :time => DateTime.new(2023, 2, 17, 12, 30)
+r12 = Request.create :status => 'Open', :location => 'Kirribilli, NSW', :title => 'dirty car', :budget => 30, :description => 'Clean my car for $60', :time => DateTime.new(2023, 2, 18, 12, 30)
+r13 = Request.create :status => 'Open', :location => 'Randwick, NSW', :title => 'save the children', :budget => 40, :description => 'teach my childrent to swim', :time => DateTime.new(2023, 2, 18, 8, 30)
+r14 = Request.create :status => 'Open', :location => 'Alexandria, NSW', :title => 'bonjour', :budget => 10, :description => 'I need lessons to learn basic french', :time => DateTime.new(2023, 2, 18, 14, 30)
 puts "#{ Request.count } requests"
 
 
@@ -39,19 +39,19 @@ u8.requests << r13
 u9.requests << r11 << r12
 
 Offer.destroy_all
-o1 = Offer.new :offer_amount => 50, :status => 'Open'
+o1 = Offer.new :offer_amount => 50, :status => 'Completed'
 o1.request_id = r1.id
 o1.user_id = u5.id
 o1.save
-o2 = Offer.new :offer_amount => 60, :status => 'Open'
+o2 = Offer.new :offer_amount => 60, :status => 'Declined'
 o2.request_id = r2.id
 o2.user_id = u5.id
 o2.save
-o3 = Offer.new :offer_amount => 70, :status => 'Open'
+o3 = Offer.new :offer_amount => 70, :status => 'Completed'
 o3.request_id = r2.id
 o3.user_id = u8.id
 o3.save
-o4 = Offer.new :offer_amount => 50, :status => 'Open'
+o4 = Offer.new :offer_amount => 50, :status => 'Declined'
 o4.request_id = r3.id
 o4.user_id = u8.id
 o4.save
@@ -71,15 +71,15 @@ o8 = Offer.new :offer_amount => 90, :status => 'Open'
 o8.request_id = r4.id
 o8.user_id = u6.id
 o8.save
-o9 = Offer.new :offer_amount => 50, :status => 'Open'
+o9 = Offer.new :offer_amount => 50, :status => 'Declined'
 o9.request_id = r1.id
 o9.user_id = u7.id
 o9.save
-o10 = Offer.new :offer_amount => 10, :status => 'Open'
+o10 = Offer.new :offer_amount => 10, :status => 'Declined'
 o10.request_id = r2.id
 o10.user_id = u7.id
 o10.save
-o11 = Offer.new :offer_amount => 20, :status => 'Open'
+o11 = Offer.new :offer_amount => 20, :status => 'Declined'
 o11.request_id = r3.id
 o11.user_id = u7.id
 o11.save
