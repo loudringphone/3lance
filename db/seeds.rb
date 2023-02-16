@@ -12,7 +12,7 @@ u9 = User.create :username => 'shilly', :email => 'shilly@gmail.co', :password =
 puts "#{ User.count } users"
 
 Offer.destroy_all
-o1 = Offer.create! :offer_amount => 50, :status => 'Open'
+o1 = Offer.create! :offer_amount => 50, :status => 'Pending'
 o2 = Offer.create! :offer_amount => 60, :status => 'Open'
 o3 = Offer.create! :offer_amount => 70, :status => 'Open'
 o4 = Offer.create! :offer_amount => 50, :status => 'Open'
@@ -29,8 +29,8 @@ o14 = Offer.create! :offer_amount => 100, :status => 'Open'
 puts "#{ Offer.count } offers"
 
 Request.destroy_all
-r1 = Request.create :status => 'Open', :location => 'Bondi', :title => 'carpet clean', :budget => 50, :description => 'carpet clean need help', :time => DateTime.new(2023, 8, 5, 12, 35)
-r2 = Request.create :status => 'Open', :location => 'Double bay', :title => 'Moving house', :budget => 60, :description => 'moving house need help', :time => DateTime.new(2023, 3, 5, 12, 00)
+r1 = Request.create :status => 'Cancelled', :location => 'Bondi', :title => 'carpet clean', :budget => 50, :description => 'carpet clean need help', :time => DateTime.new(2023, 8, 5, 12, 35)
+r2 = Request.create :status => 'Closed', :location => 'Double bay', :title => 'Moving house', :budget => 60, :description => 'moving house need help', :time => DateTime.new(2023, 3, 5, 12, 00)
 r3 = Request.create :status => 'Open', :location => 'Glebe', :title => 'Wall repair', :budget => 70, :description => 'wall repair need help', :time => DateTime.new(2023, 3, 1, 8, 35)
 r4 = Request.create :status => 'Open', :location => 'Pyrmont', :title => 'Paint bathroom', :budget => 50, :description => 'I need helpt to paint my bathroom', :time => DateTime.new(2023, 4, 4, 11, 30)
 r5 = Request.create :status => 'Open', :location => 'Parramatta', :title => 'Kitchen clean', :budget => 60, :description => 'I need help to clean my kitchen', :time => DateTime.new(2023, 2, 21, 10, 00)
