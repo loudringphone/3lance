@@ -11,23 +11,6 @@ u9 = User.create :username => 'shilly', :email => 'shilly@gmail.co', :password =
 
 puts "#{ User.count } users"
 
-Offer.destroy_all
-o1 = Offer.create! :offer_amount => 50, :status => 'Open'
-o2 = Offer.create! :offer_amount => 60, :status => 'Open'
-o3 = Offer.create! :offer_amount => 70, :status => 'Open'
-o4 = Offer.create! :offer_amount => 50, :status => 'Open'
-o5 = Offer.create! :offer_amount => 60, :status => 'Open'
-o6 = Offer.create! :offer_amount => 70, :status => 'Open'
-o7 = Offer.create! :offer_amount => 80, :status => 'Open'
-o8 = Offer.create! :offer_amount => 90, :status => 'Open'
-o9 = Offer.create! :offer_amount => 50, :status => 'Open'
-o10 = Offer.create! :offer_amount => 10, :status => 'Open'
-o11 = Offer.create! :offer_amount => 20, :status => 'Open'
-o12 = Offer.create! :offer_amount => 30, :status => 'Open'
-o13 = Offer.create! :offer_amount => 40, :status => 'Open'
-o14 = Offer.create! :offer_amount => 100, :status => 'Open'
-puts "#{ Offer.count } offers"
-
 Request.destroy_all
 r1 = Request.create :status => 'Open', :location => 'Bondi', :title => 'carpet clean', :budget => 50, :description => 'carpet clean need help', :time => DateTime.new(2023, 8, 5, 12, 35)
 r2 = Request.create :status => 'Open', :location => 'Double bay', :title => 'Moving house', :budget => 60, :description => 'moving house need help', :time => DateTime.new(2023, 3, 5, 12, 00)
@@ -55,23 +38,91 @@ u7.requests << r9
 u8.requests << r13
 u9.requests << r11 << r12
 
-puts "Users and offers"
-u4.offers << o13
-u5.offers << o1 << o2
-u6.offers << o7 << o8
-u7.offers << o9 << o10 << o11 << o12
-u8.offers << o3 << o4 << o5 << o6
-u9.offers << o14
+Offer.destroy_all
+o1 = Offer.new :offer_amount => 50, :status => 'Open'
+o1.request_id = r1.id
+o1.user_id = u5.id
+o1.save
+o2 = Offer.new :offer_amount => 60, :status => 'Open'
+o2.request_id = r2.id
+o2.user_id = u5.id
+o2.save
+o3 = Offer.new :offer_amount => 70, :status => 'Open'
+o3.request_id = r2.id
+o3.user_id = u8.id
+o3.save
+o4 = Offer.new :offer_amount => 50, :status => 'Open'
+o4.request_id = r3.id
+o4.user_id = u8.id
+o4.save
+o5 = Offer.new :offer_amount => 60, :status => 'Open'
+o5.request_id = r4.id
+o5.user_id = u8.id
+o5.save
+o6 = Offer.new :offer_amount => 70, :status => 'Open'
+o6.request_id = r5.id
+o6.user_id = u8.id
+o6.save
+o7 = Offer.new :offer_amount => 80, :status => 'Open'
+o7.request_id = r7.id
+o7.user_id = u6.id
+o7.save
+o8 = Offer.new :offer_amount => 90, :status => 'Open'
+o8.request_id = r4.id
+o8.user_id = u6.id
+o8.save
+o9 = Offer.new :offer_amount => 50, :status => 'Open'
+o9.request_id = r1.id
+o9.user_id = u7.id
+o9.save
+o10 = Offer.new :offer_amount => 10, :status => 'Open'
+o10.request_id = r2.id
+o10.user_id = u7.id
+o10.save
+o11 = Offer.new :offer_amount => 20, :status => 'Open'
+o11.request_id = r3.id
+o11.user_id = u7.id
+o11.save
+o12 = Offer.new :offer_amount => 30, :status => 'Open'
+o12.request_id = r6.id
+o12.user_id = u7.id
+o12.save
+o13 = Offer.new :offer_amount => 40, :status => 'Open'
+o13.request_id = r8.id
+o13.user_id = u4.id
+o13.save
+o14 = Offer.new :offer_amount => 100, :status => 'Open'
+o14.request_id = r8.id
+o14.user_id = u9.id
+o14.save
+puts "#{ Offer.count } offers"
+
 
 puts "Requests and offers"
-r1.offers << o1 << o9
-r2.offers << o2 << o3 << o10
-r3.offers << o4 << o11
-r4.offers << o5 << o8
-r5.offers << o6
-r6.offers << o12
-r7.offers << o7
-r8.offers << o13 << o14
+# r1.offers << o1 << o9
+# r2.offers << o2 << o3 << o10
+# r3.offers << o4 << o11
+# r4.offers << o5 << o8
+# r5.offers << o6
+# r6.offers << o12
+# r7.offers << o7
+# r8.offers << o13 << o14
+
+puts "Users and offers"
+# u4.offers << o13
+# u5.offers << o1 << o2
+# u6.offers << o7 << o8
+# u7.offers << o9 << o10 << o11 << o12
+# u8.offers << o3 << o4 << o5 << o6
+# u9.offers << o14
+
+
+
+
+
+
+
+
 
 
 # Seed data for Message model
