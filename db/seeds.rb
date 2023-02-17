@@ -14,7 +14,7 @@ puts "#{ User.count } users"
 Request.destroy_all
 r1 = Request.create :status => 'Completed', :location => 'Bondi, NSW', :title => 'carpet clean', :budget => 50, :description => 'carpet clean need help', :time => DateTime.new(2023, 8, 5, 12, 35)
 r2 = Request.create :status => 'Completed', :location => 'Double bay, NSW', :title => 'Moving house', :budget => 60, :description => 'moving house need help', :time => DateTime.new(2023, 3, 5, 12, 00)
-r3 = Request.create :status => 'Cancelled', :location => 'Glebe, NSW', :title => 'Wall repair', :budget => 70, :description => 'wall repair need help', :time => DateTime.new(2023, 3, 1, 8, 35)
+r3 = Request.create :status => 'Canceled', :location => 'Glebe, NSW', :title => 'Wall repair', :budget => 70, :description => 'wall repair need help', :time => DateTime.new(2023, 3, 1, 8, 35)
 r4 = Request.create :status => 'Open', :location => 'Pyrmont, NSW', :title => 'Paint bathroom', :budget => 50, :description => 'I need helpt to paint my bathroom', :time => DateTime.new(2023, 4, 4, 11, 30)
 r5 = Request.create :status => 'Open', :location => 'Parramatta, NSW', :title => 'Kitchen clean', :budget => 60, :description => 'I need help to clean my kitchen', :time => DateTime.new(2023, 2, 21, 10, 00)
 r6 = Request.create :status => 'Open', :location => 'Surry hills, NSW', :title => 'Pet sitting', :budget => 70, :description => 'look after pets whilst i am on holiday', :time => DateTime.new(2023, 2, 18, 8, 00)
