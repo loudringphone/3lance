@@ -22,8 +22,9 @@ class RequestsController < ApplicationController
     end
     # POST
     def create
-      @request = Request.new(request_params)
-
+      @request = Request.create(request_params)
+      @request.budget = @request.budget.round(2)
+      @request.save
       respond_to do |format|
         if @request.save
           format.html { redirect_to request_url(@request), notice: "Request was successfully created." }
@@ -39,6 +40,8 @@ class RequestsController < ApplicationController
     def update
       respond_to do |format|
         if @request.update(request_params)
+          @request.budget = @request.budget.round(2)
+          @request.save
           format.html { redirect_to request_url(@request), notice: "Request was successfully updated." }
           format.json { render :show, status: :ok, location: @request }
         else
